@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- Twitter Card (idk if this works but idrc) -->
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:site" content="@dourdotcom" />
+        <meta name="twitter:description" content="my personal website." />
+        <meta name="twitter:app:name:iphone" content="errplane's website" />
+        <meta name="twitter:app:name:ipad" content="errplane's website" />
+        <meta name="twitter:app:name:googleplay" content="errplane's website" />
+        <!-- OG Tags -->
+        <meta property="og:title" content="errplane's site" />
+        <meta property="og:site_name" content="dour.com" />
+        <meta property="og:url" content="https://dour.com" />
+        <meta property="og:description" content="my personal website." />
+        <meta property="og:type" content="website" />
+        <!-- Styles -->
+        <link rel="stylesheet" href="styles.css" />
+        <title>errplane's site</title>
+    </head>
+    <body>
+        <div class="center">
+            <div class="card">
+                <div>
+                    <b>now playing</b>
+                    <br/>
+                    <img src="https://placehold.co/150" id="track-cover"></img>
+                </div>
+                <div>
+                    <b id="track-title">Unknown</b>
+                    <p id="track-artist">Unknown</p>
+                </div>
+            </div>
+            <div>
+                <a href="https://yoursit.ee/alone">
+                    <svg class="icon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1417.32 1417.32" style="enable-background:new 0 0 1417.32 1417.32;" xml:space="preserve"><g fill="currentColor"><path d="M546.43,1078.71c35.08,35.44,70.16,70.88,105.24,106.31c-32.79,32.28-65.59,64.55-98.38,96.83c-128.59,98.45-311.94,78.16-412.71-40.71c-95.05-112.12-92.43-283.37,10-396.29c132.1-131.33,264.19-262.67,396.29-394l104.57,105.43C520.86,686.76,390.29,817.24,259.71,947.71c-53.58,58.21-51.71,149.38,3.86,205.14c55.17,55.35,145.49,57.97,204,5.57C493.86,1131.86,520.14,1105.29,546.43,1078.71z"/><path d="M862.51,346.58c-35.08-35.44-70.16-70.88-105.24-106.31c32.79-32.28,65.59-64.55,98.38-96.83c128.59-98.45,311.93-78.16,412.71,40.71c95.05,112.12,92.43,283.37-10,396.29c-132.1,131.33-264.19,262.67-396.29,394L757.51,869.01c130.57-130.48,261.14-260.95,391.71-391.43c53.58-58.21,51.71-149.38-3.86-205.14c-55.17-55.35-145.49-57.97-204-5.57C915.09,293.44,888.8,320.01,862.51,346.58z"/><path d="M1069.62,869.65c35.32-35.19,70.65-70.39,105.97-105.58c32.38,32.69,64.76,65.38,97.14,98.07c98.86,128.28,79.16,311.68-39.39,412.84c-111.81,95.41-283.07,93.34-396.32-8.73c-131.76-131.67-263.51-263.35-395.27-395.02l105.09-104.91c130.89,130.15,261.79,260.31,392.68,390.46c58.39,53.39,149.55,51.23,205.13-4.51c55.18-55.35,57.5-145.67,4.92-204.02C1122.93,922.05,1096.28,895.85,1069.62,869.65z"/><path d="M337.89,555.79c-35.33,35.19-70.65,70.39-105.98,105.58c-32.38-32.69-64.76-65.38-97.14-98.07c-98.86-128.28-79.16-311.68,39.39-412.84c111.81-95.41,283.07-93.34,396.32,8.73C702.23,290.86,833.99,422.53,965.75,554.2L860.65,659.11C729.76,528.96,598.87,398.81,467.97,268.65c-58.39-53.39-149.55-51.23-205.13,4.51c-55.18,55.35-57.5,145.67-4.92,204.02C284.58,503.38,311.24,529.58,337.89,555.79z"/></g><script xmlns=""/></svg>
+                </a>
+                <a href="https://blog.dour.com">
+                    <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+                      <path d="M11.25 4.533A9.707 9.707 0 0 0 6 3a9.735 9.735 0 0 0-3.25.555.75.75 0 0 0-.5.707v14.25a.75.75 0 0 0 1 .707A8.237 8.237 0 0 1 6 18.75c1.995 0 3.823.707 5.25 1.886V4.533ZM12.75 20.636A8.214 8.214 0 0 1 18 18.75c.966 0 1.89.166 2.75.47a.75.75 0 0 0 1-.708V4.262a.75.75 0 0 0-.5-.707A9.735 9.735 0 0 0 18 3a9.707 9.707 0 0 0-5.25 1.533v16.103Z" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <script src="index.js"></script>
+        <script src="https://andrey-1988-dev.github.io/snowfall-js/snowfall.js"></script>
+        <script>
+            let snowfall = new Snowfall({
+                count: 100, // number of snowflakes
+                minRadius: 20, // minimum radius of a snowflake in pixels
+                maxRadius: 50, // maximum radius of a snowflake in pixels
+                minSpeed: 2, // minimum speed of a snowflake in pixels per frame
+                maxSpeed: 3, // maximum speed of a snowflake in pixels per frame
+                text: "•", // text for a snowflake (can be any symbol or text)
+                color: "#ffffff", // color of a snowflake in HEX format
+                zIndex: "1000", // z-index for the snowflakes canvas
+            });
+        </script>
+    </body>
+</html>

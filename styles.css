@@ -23,6 +23,10 @@ body {
     align-items: center;
     gap: 1rem;
     flex-direction: column;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    transition: transform 0.15s ease-out;
+    will-change: transform;
 }
 
 img {

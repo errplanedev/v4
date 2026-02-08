@@ -53,3 +53,21 @@ function updateTrackData() {
 updateTrackData();
 
 setInterval(updateTrackData, 1000);
+
+const card = document.querySelector(".card");
+
+const clamp = (v, min, max) => Math.min(Math.max(v, min), max);
+
+document.body.addEventListener("mousemove", (e) => {
+  const x = (e.clientX / window.innerWidth - 0.5) * 2;
+  const y = (e.clientY / window.innerHeight - 0.5) * 2;
+
+  const rotateY = clamp(x * 25, -25, 25);
+  const rotateX = clamp(-y * 25, -25, 25);
+
+  card.style.transform = `
+    rotateX(${rotateX}deg)
+    rotateY(${rotateY}deg)
+    translateZ(20px)
+  `;
+});

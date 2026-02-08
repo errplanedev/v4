@@ -37,6 +37,15 @@ setInterval(() => {
   poll().catch(console.error);
 }, 1500);
 
+function setFavicon(url) {
+  const link =
+    document.querySelector("link[rel*='icon']") ||
+    document.createElement("link");
+  link.rel = "icon";
+  link.href = url;
+  document.head.appendChild(link);
+}
+
 function updateTrackData() {
   const title = document.getElementById("track-title");
   const artists = document.getElementById("track-artist");
@@ -48,6 +57,7 @@ function updateTrackData() {
   }
   artists.textContent = trackData.artist;
   cover.src = trackData.image;
+  setFavicon(trackData.image);
 }
 
 updateTrackData();

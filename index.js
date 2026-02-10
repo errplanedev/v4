@@ -62,7 +62,7 @@ function updateTrackData() {
 
 updateTrackData();
 
-setInterval(updateTrackData, 5000);
+setInterval(updateTrackData, 10);
 
 const card = document.querySelector(".card");
 
